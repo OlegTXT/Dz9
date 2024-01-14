@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% block title %}
+Category Page
+{% endblock %}
+
+{% block content %}
+
+<h1>Start Page</h1>
+{% for genre in genre_list %}
+<p><a href="{% url 'genre_detail' genre.pk %}">{{ genre }}</a></p>
+{% endfor %}
+
+{% endblock content %}
